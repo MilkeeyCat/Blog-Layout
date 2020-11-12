@@ -1,0 +1,78 @@
+@import "../mixins";
+
+.header {
+    $border-color: #eaeaeb;
+    background: #fff;
+    font-family: 'Raleway', sans-serif;
+
+    .container {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        align-items: stretch;
+
+        span,
+        button {
+            @include hover-effect;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            border-left: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+        }
+
+        button {
+            text-transform: uppercase;
+            background: none;
+            border-right: 1px solid $border-color;
+            padding: 0 15px;
+        }
+    }
+
+    &__nav ul {
+        display: flex;
+        text-transform: uppercase;
+        height: 100%;
+        align-items: center;
+
+        li {
+            margin: 0 15px;
+
+            a {
+                @include hover-effect;
+            }
+        }
+    }
+
+    &__social-links {
+        display: flex;
+
+        li {
+            height: 100%;
+            border-left: 1px solid $border-color;
+
+            &:last-child {
+                border-right: 1px solid $border-color;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 45px;
+            height: 100%;
+
+            & {
+                @include hover-effect;
+            }
+        }
+    }
+}

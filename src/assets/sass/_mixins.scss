@@ -1,0 +1,8 @@
+@mixin hover-effect() {
+    cursor: pointer;
+    transition: color .5s;
+
+    &:hover {
+        color: #ffb79b;
+    }
+}

@@ -1,0 +1,55 @@
+.content {
+    $this: &;
+
+    margin-top: 50px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            font-family: Noterra;
+            font-size: 80px;
+        }
+
+        h2 {
+            margin-top: 20px;
+            font-family: Raleway;
+            text-transform: uppercase;
+            position: relative;
+            $lines-width: 50px;
+            color: #ffb79b;
+
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: $lines-width;
+                height: 1px;
+                background: #000;
+            }
+
+            &:before {
+                left: -($lines-width + 20px);
+            }
+
+            &:after {
+                right: -($lines-width + 20px);
+            }
+        }
+    }
+
+    &__slider {
+        $this: ".slider";
+
+        margin-top: 50px;
+
+        #{$this}__slides {
+            transform: translateX(-100%);
+        }
+    }
+}
