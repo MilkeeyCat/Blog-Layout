@@ -1,5 +1,6 @@
 .content {
     $this: &;
+    $slider: ".slider";
 
     margin-top: 50px;
 
@@ -44,12 +45,52 @@
     }
 
     &__slider {
-        $this: ".slider";
 
         margin-top: 50px;
 
-        #{$this}__slides {
+        #{$slider}__slides {
             transform: translateX(-100%);
+        }
+    }
+
+    &__multiple-slider-wrapper {
+        position: relative;
+
+        span {
+            color: #fff;
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 30px;
+            text-transform: uppercase;
+            background: #ffb79b;
+            z-index: 1;
+        }
+    }
+
+    &__multiple-slider {
+        max-height: 200px;
+        margin-top: 60px;
+
+        #{$slider}__slides {
+            max-width: 25%;
+            transform: translateX(-100%);
+        }
+
+        #{$slider}__prev-btn,
+        #{$slider}__next-btn {
+            max-width: 36px;
+            background: rgba(227, 166, 142, .8);
+            color: #fff;
+
+            &:hover {
+                color: #000;
+            }
+        }
+
+        #{$slider}__next-btn {
+            transform: none;
         }
     }
 }

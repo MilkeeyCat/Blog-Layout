@@ -38,10 +38,10 @@ export class Slider {
                 slide.parentNode.appendChild(slide);
 
                 this.moving = false;
-                document.removeEventListener("transitionend", handler);
+                this.elements.slidesContainer.removeEventListener("transitionend", handler);
             }
 
-            document.addEventListener("transitionend", handler);
+            this.elements.slidesContainer.addEventListener("transitionend", handler);
             this.updateVariablesValue();
         }
     }
@@ -60,10 +60,10 @@ export class Slider {
                 slide.parentNode.insertBefore(slide, this.elements.slides[0]);
 
                 this.moving = false;
-                document.removeEventListener("transitionend", handler);
+                this.elements.slidesContainer.removeEventListener("transitionend", handler);
             }
 
-            document.addEventListener("transitionend", handler);
+            this.elements.slidesContainer.addEventListener("transitionend", handler);
             this.updateVariablesValue();
         }
     }
