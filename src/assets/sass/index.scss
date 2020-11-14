@@ -74,8 +74,12 @@
         margin-top: 60px;
 
         #{$slider}__slides {
+            transform: translateX(-25%);
+        }
+
+        #{$slider}__slide {
             max-width: 25%;
-            transform: translateX(-100%);
+
         }
 
         #{$slider}__prev-btn,

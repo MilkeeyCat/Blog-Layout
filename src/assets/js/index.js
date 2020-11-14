@@ -1,5 +1,9 @@
 import {Slider} from "./slider.js";
 
+//= milkeeycatAnimate
+
+Animate.init();
+
 const slider = new Slider({
     slider: ".content__slider",
     transitionDuration: "1s",
@@ -12,8 +16,8 @@ slider.run();
 const multipleSlider = new Slider({
     slider: ".content__multiple-slider",
     transitionDuration: "1s",
-    defaultTranslateX: "-100%",
-    maxTranslateX: "-200%"
+    defaultTranslateX: "-25%",
+    maxTranslateX: "-50%"
 });
 
 multipleSlider.run();

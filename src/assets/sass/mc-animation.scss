@@ -1,0 +1,26 @@
+.mc-init {
+    opacity: 0;
+}
+
+[data-mc="fade-right"] {
+    transform: translateX(-100px);
+}
+
+[data-mc="fade-left"] {
+    transform: translateX(100px);
+}
+
+[data-mc="fade-up"] {
+    transform: translateY(-100px);
+}
+
+[data-mc="fade-down"] {
+    transform: translateY(100px);
+}
+
+.mc-animate {
+    transition: all .8s;
+
+    transform: translateX(0);
+    opacity: 1;
+}
