@@ -5,9 +5,9 @@ export class Animate {
 
         const observer = new IntersectionObserver(function (entries, observer) {
             entries.forEach(entry => {
-               if(entry.isIntersecting) {
-                   entry.target.classList.add("mc-animate");
-               }
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("mc-animate");
+                }
             });
         });
 

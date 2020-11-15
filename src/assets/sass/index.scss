@@ -97,4 +97,44 @@
             transform: none;
         }
     }
+
+    &__inner {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+
+        .block-title {
+            font-size: 22px;
+        }
+    }
+
+    &__posts {
+        max-width: 870px;
+        width: 100%;
+
+        .post {
+            margin-top: 30px;
+        }
+    }
+
+    &__post-twice {
+        display: flex;
+        justify-content: space-between;
+
+        .post {
+
+            width: calc(50% - 10px);
+
+            &__about-author {
+                &:after {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    &__sidebar {
+        max-width: 270px;
+        width: 100%;
+    }
 }

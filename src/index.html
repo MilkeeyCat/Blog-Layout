@@ -38,5 +38,18 @@ title: Home
                 <div class="slider__next-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
             </div>
         </div>
+        <div class="content__inner">
+            <div class="content__posts">
+                <h3 class="block-title">recent posts</h3>
+                {{> post }}
+                <div class="content__post-twice">
+                    {{> post-small }}
+                    {{> post-small }}
+                </div>
+            </div>
+            <aside class="content__sidebar">
+                <h3 class="block-title">sidebar</h3>
+            </aside>
+        </div>
     </div>
 </section>

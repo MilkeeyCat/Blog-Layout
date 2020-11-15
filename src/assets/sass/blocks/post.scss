@@ -1,0 +1,140 @@
+.post {
+    max-width: 100%;
+    background: #fff;
+    box-shadow: 2px 2px 5px #eaeaeb;
+
+    &__image {
+        position: relative;
+
+        & > a > img {
+            width: 100%;
+            max-height: 370px;
+            object-fit: cover;
+        }
+
+        &-type {
+            width: 48px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffb79b;
+            position: absolute;
+            top: 0;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+
+    &__inner {
+        padding: 40px 30px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 17px;
+        letter-spacing: .04rem;
+    }
+
+    &__about-author {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+        }
+
+        &:before {
+            background: #eaeaeb;
+        }
+
+        &:after {
+            width: 25%;
+            height: 2px;
+            background: #ffb79b;
+        }
+    }
+
+    &__author {
+        color: #ffb79b;
+    }
+
+    &__excerpt {
+        margin-top: 30px;
+        letter-spacing: .5px;
+        line-height: 1.3;
+    }
+
+    &__bottom {
+        margin-top: 30px;
+        height: 40px;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+
+        button {
+            padding: 0 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            background: #ffb79b;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+
+    &__social-media-btns {
+        display: flex;
+
+        li {
+            a {
+                width: 40px;
+                height: 100%;
+                border-top: 1px solid #eaeaeb;
+                border-bottom: 1px solid #eaeaeb;
+                border-left: 1px solid #eaeaeb;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include hover-effect;
+            }
+
+            &:nth-last-child(2) {
+                a {
+                    border-right: 1px solid #eaeaeb;
+                }
+            }
+
+            &:last-child {
+                margin-left: 5px;
+
+                a {
+                    border: none;
+                    background: #ffb79b;
+                    color: #fff;
+                    transition: all .5s;
+
+                    &:hover {
+                        color: #000;
+                        background: #f7f7f7;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@
 
 body {
     background: #f7f7f7;
+    font-family: Raleway;
 }
 
 .container {
@@ -14,4 +15,34 @@ body {
 @font-face {
     font-family: Noterra;
     src: url("../fonts/Notera_PersonalUseOnly.ttf");
+}
+
+.block {
+    &-title {
+        position: relative;
+        text-transform: uppercase;
+        font-family: Raleway;
+        font-weight: 700;
+        padding-bottom: 10px;
+
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+        }
+
+        &:before {
+            background: #eaeaeb;
+        }
+
+        &:after {
+            width: 25%;
+            height: 2px;
+            background: #ffb79b;
+        }
+    }
 }
