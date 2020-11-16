@@ -3727,6 +3727,12 @@ body {
     box-shadow: 2px 2px 5px #eaeaeb;
 }
 
+.post:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
 .post__image {
     position: relative;
 }
@@ -3891,6 +3897,24 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+}
+
+.post-wide .post__image > a > img {
+    width: 300px;
+    height: 300px;
+}
+
+.post-wide .post__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .content {

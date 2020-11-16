@@ -3,6 +3,10 @@
     background: #fff;
     box-shadow: 2px 2px 5px #eaeaeb;
 
+    &:hover {
+        transform: scale(1.05);
+    }
+
     &__image {
         position: relative;
 
@@ -139,6 +143,21 @@
     }
 
     &-wide {
+        $this: ".post";
+
         display: flex;
+        #{$this}__image {
+            & > a > img {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        #{$this}__inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     }
+
 }
