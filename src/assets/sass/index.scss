@@ -115,19 +115,19 @@
         .post {
             margin-top: 30px;
         }
-    }
 
-    &__post-twice {
-        display: flex;
-        justify-content: space-between;
+        &-twice {
+            display: flex;
+            justify-content: space-between;
 
-        .post {
+            .post {
 
-            width: calc(50% - 10px);
+                width: calc(50% - 10px);
 
-            &__about-author {
-                &:after {
-                    width: 70%;
+                &__about-author {
+                    &:after {
+                        width: 70%;
+                    }
                 }
             }
         }

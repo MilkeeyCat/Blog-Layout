@@ -11,7 +11,6 @@ const slider = new Slider({
     maxTranslateX: "-200%"
 });
 
-slider.run();
 
 const multipleSlider = new Slider({
     slider: ".content__multiple-slider",
@@ -20,4 +19,7 @@ const multipleSlider = new Slider({
     maxTranslateX: "-50%"
 });
 
-multipleSlider.run();
+window.addEventListener("load", function (e) {
+    slider.run();
+    multipleSlider.run();
+});

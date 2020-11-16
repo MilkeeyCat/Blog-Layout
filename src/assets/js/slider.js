@@ -1,4 +1,4 @@
-import { swipe } from "./swipe.js";
+import {swipe} from "./swipe.js";
 
 export const transitionDuration = ".7s";
 
@@ -37,8 +37,8 @@ export class Slider {
                 const slide = this.elements.slides[0];
                 slide.parentNode.appendChild(slide);
 
-                this.moving = false;
                 this.elements.slidesContainer.removeEventListener("transitionend", handler);
+                this.moving = false;
             }
 
             this.elements.slidesContainer.addEventListener("transitionend", handler);
@@ -59,8 +59,8 @@ export class Slider {
                 const slide = this.elements.slides[this.elements.slides.length - 1];
                 slide.parentNode.insertBefore(slide, this.elements.slides[0]);
 
-                this.moving = false;
                 this.elements.slidesContainer.removeEventListener("transitionend", handler);
+                this.moving = false;
             }
 
             this.elements.slidesContainer.addEventListener("transitionend", handler);
@@ -72,28 +72,16 @@ export class Slider {
         swipe(this.elements.slidesContainer, {minTime: 50});
         this.elements.slidesContainer.addEventListener("swipe", (e) => {
             console.log(e.detail);
-            if(e.detail.dir == "left") this.nexSlide();
-            else if(e.detail.dir == "right") this.prevSlide();
+            if (e.detail.dir == "left") this.nexSlide();
+            else if (e.detail.dir == "right") this.prevSlide();
         });
         this.elements.nextBtn.onclick = () => {
             this.nexSlide();
         }
 
-
         this.elements.prevBtn.onclick = () => {
             this.prevSlide();
 
         }
-    }
-}
-
-export class ManySlidesSlider extends Slider {
-    updateVariablesValue() {
-        const slider = document.querySelector(this.slider);
-
-        this.elements.slidesContainer = slider.querySelector(".many-slides-slider__slides");
-        this.elements.nextBtn = slider.querySelector(".many-slides-slider__next-btn");
-        this.elements.prevBtn = slider.querySelector(".many-slides-slider__prev-btn");
-        this.elements.slides = slider.querySelectorAll(".many-slides-slider__slide");
     }
 }

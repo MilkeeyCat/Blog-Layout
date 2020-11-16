@@ -3887,6 +3887,12 @@ body {
     background: #f7f7f7;
 }
 
+.post-wide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 .content {
     margin-top: 50px;
 }
@@ -4022,7 +4028,7 @@ body {
     margin-top: 30px;
 }
 
-.content__post-twice {
+.content__posts-twice {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4031,11 +4037,11 @@ body {
     justify-content: space-between;
 }
 
-.content__post-twice .post {
+.content__posts-twice .post {
     width: calc(50% - 10px);
 }
 
-.content__post-twice .post__about-author:after {
+.content__posts-twice .post__about-author:after {
     width: 70%;
 }
 
