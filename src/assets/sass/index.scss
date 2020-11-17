@@ -106,6 +106,10 @@
         .block-title {
             font-size: 22px;
         }
+
+        .block-subtitle {
+            font-size: 19px;
+        }
     }
 
     &__posts {
@@ -133,7 +137,7 @@
         }
     }
 
-    &__sidebar {
+    & .sidebar {
         max-width: 270px;
         width: 100%;
     }
